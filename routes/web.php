@@ -17,6 +17,7 @@ use App\Http\Controllers\BackOfficeController;
 
 Route::get('/', [StarController::class,'show']);
 Route::get('/backOffice', [BackOfficeController::class, 'show']);
+
 Route::post('/delete', [BackOfficeController::class, 'deleteStar']);
 
 Route::get('/addStar', [BackOfficeController::class, 'showAddStar']);

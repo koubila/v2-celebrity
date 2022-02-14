@@ -1,6 +1,5 @@
 @extends('layouts.base')
-@section('css', '')
-
+@section('css', 'style')
 @section('title', 'Modifier')
 @section('header')
     <button><a href="/backOffice">Annuler</a></button>
@@ -25,7 +24,7 @@
             <div>
                 <label for="image">Image</label>
                 <div>
-                    <img style="width:30px; height:30px" src="{{ asset('img/' . $star->image_path) }}" />
+                    <img style="width:30px; height:30px" src="{{ $star->image_path }}" />
                     <input type="file" name="image" value="{{ $star->image_path }}">
                 </div>
             </div>

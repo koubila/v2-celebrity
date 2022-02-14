@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Star;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -9,6 +10,7 @@ use Illuminate\Database\Eloquent\Factories\Factory;
  */
 class StarFactory extends Factory
 {
+    protected $model = Star::class;
     /**
      * Define the model's default state.
      *
@@ -17,7 +19,10 @@ class StarFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'firstname' => $this->faker->firstName($gender = null||'male'||'female'),
+            'lastname' => $this->faker->lastName(),
+            'image_path'=> $this->faker->imageUrl($width = 50, $height = 50),
+            'description'=>$this->faker->realText($maxNbChars = 200, $indexSize = 2), 
         ];
     }
 }

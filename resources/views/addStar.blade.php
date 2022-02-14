@@ -1,5 +1,5 @@
 @extends('layouts.base')
-@section('css', '')
+@section('css', 'style')
 
 @section('title', 'Ajouter')
 @section('header')

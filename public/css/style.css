@@ -2,6 +2,9 @@
     margin: 0;
     padding: 0;  
 }
+header{
+    display: flex;
+}
 li{
     text-decoration: none;
     border: black solid 1px;
@@ -13,36 +16,34 @@ h1{
 }
 .container{
     /* display: flex; */
-    border: orange solid 5px;
+    border: black solid 1px;
 }
 .names{
     display: flex;
-    background-color: grey;
 }
 .description{
-    background-color: blue;
     width: 100%;
     flex-direction: column;
 
 }
 .container-describe{
     display: flex;
-    border:purple solid 3px;
 }
 .picture{
     width: 60px;
     height: 60px;
-    background-color: black;
 }
 .star-name{
-    /* width: 60px;
-    height:20px; */
-    background-color: green;
+    /* background-color: green; */
+    width: 100px;
 }
 .star-describe{
     width: 100%;
-    background-color: yellow;
-    /* flex-direction: row-reverse; */
-
+    
 }
-
+img{
+    width:60px;
+    height: 60px;
+    border: 2px solid white;
+    /* box-shadow: 5px 5px 5px black; */
+}

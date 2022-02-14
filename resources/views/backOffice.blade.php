@@ -1,5 +1,5 @@
 @extends('layouts.base')
-@section('css', 'backOffice')
+@section('css', 'style')
 @section('title', 'Back Office CRUD')
 @section('header')
     <button><a href="/">Retour</a></button>
@@ -26,8 +26,7 @@
 
                         <td>{{ $star->lastname }}</td>
                         <td>{{ $star->firstname }}</td>
-                        <td> <img style="width:30px; height:30px" src="{{ asset('img/' . $star->image_path) }}" alt=" " />
-                        </td>
+                        <td><img style="width:30px; height:30px;" src="{{ $star->image_path }}" alt="picture" /></td>
                         <td>{{ $star->description }}</td>
                         <td>
                             <a href="/update/{{ $star->id }}">MAJ</a>
@@ -36,7 +35,7 @@
                             <form action="/delete" method="POST">
                                 @csrf
                                 <input type="hidden" name="id" value="{{ $star->id }}">
-                                <input class="btn btn-danger" type="submit" value="x">
+                                <button type="submit">X</button>
                             </form>
                         </td>
                     </tr>
